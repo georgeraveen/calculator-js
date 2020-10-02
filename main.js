@@ -3,7 +3,7 @@ const clearButton = document.querySelector("#clear-btn");
 
 function clear(){
 
-    typingArea.value = "";
+    typingArea.value = "0.0";
     typingArea.style.fontSize="80px";
     typingArea.style.fontWeight = "bolder";
 }
@@ -32,7 +32,7 @@ function evaluate(){
     operands = operands.map(Number);
 
     if(operators.length>=operands.length){
-        alert("Invalid expression !");
+        alert("Invalid expression please enter correct !");
         return;
     }
 
@@ -68,8 +68,8 @@ function evaluate(){
 
     }
 
-    typingArea.style.fontSize = "60px";
-    typingArea.style.fontWeight = "normal";
+    typingArea.style.fontSize = "70px";
+    typingArea.style.fontWeight = "bold";
     typingArea.value += "=\n"+operands[0];
 
 }
@@ -109,7 +109,7 @@ function digitClick(val){
             textEntered += val;
         }
     }else{
-        alert("Please enter a valid expression !");
+        alert("Please enter a expression (number operator number !");
     }
     typingArea.value=textEntered;
 }
